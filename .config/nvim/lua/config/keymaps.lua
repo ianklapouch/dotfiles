@@ -5,9 +5,8 @@ local opts = { noremap = true, silent = true }
 keymap.set("n", "<C-u>", "<C-u>zz")
 keymap.set("n", "<C-d>", "<C-d>zz")
 
--- After 'n' or 'N', center the screen and enter visual mode for visual emphasis.
-keymap.set("n", "n", "nzzzv")
-keymap.set("n", "N", "Nzzzv")
+keymap.set("n", "n", "nzz")
+keymap.set("n", "N", "Nzz")
 
 -- Delete text without affecting default register
 keymap.set("n", "x", '"_x')
@@ -17,7 +16,7 @@ keymap.set("n", "+", "<C-a>")
 keymap.set("n", "-", "<C-x>")
 
 -- Delete a word backwards
-keymap.set("n", "dw", 'vb"_d')
+keymap.set("n", "db", 'vb"_d')
 
 -- Select all
 keymap.set("n", "<C-a>", "gg<S-v>G")
@@ -49,3 +48,12 @@ keymap.set("n", "<C-w><left>", "<C-w><")
 keymap.set("n", "<C-w><right>", "<C-w>>")
 keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
+
+-- Dap
+keymap.set("n", "<F5>", require("dap").continue)
+keymap.set("n", "<F10>", require("dap").step_over)
+keymap.set("n", "<F11>", require("dap").step_into)
+keymap.set("n", "<F12>", require("dap").step_out)
+
+--Undo Tree
+vim.keymap.set("n", "<leader>U", vim.cmd.UndotreeToggle, { desc = "Undotree" })

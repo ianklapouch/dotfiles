@@ -55,8 +55,17 @@ bar:
       label_snow_flake: "❄️ {temperature_celsius}°C"
       label_thunderstorm: "⚡ {temperature_celsius}°C"
       label_cloud: "☁️ {temperature_celsius}°C"
+    - type: "system tray"
+      label_expand_text: "<"
+      label_collapse_text: ">"
   
   components_right:
+    - type: "music"
+      label_not_playing: ""
+      label_paused: "{song_title} - {artist_name}"
+      label_playing: "{song_title} - {artist_name} ▶"
+      max_title_length: 20
+      max_artist_length: 20
     - type: "cpu"
       label: "CPU: {percent_usage}%"
       # How often this counter is refreshed.
