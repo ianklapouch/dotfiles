@@ -1,6 +1,6 @@
 gaps:
-  inner_gap: 10 
-  outer_gap: 10 
+  inner_gap: 10
+  outer_gap: 10
 
 general:
   # Whether to show floating windows as always on top.
@@ -13,80 +13,117 @@ bar:
   opacity: 1.0
   background: "#1f1f28"
   foreground: "#c8c3aa"
-  font_family: "JetBrainsMono Nerd Font"
+  font_family: "Hack Nerd Font"
   font_size: "13px"
   padding: "4px 6px"
-  # offset_x: "10px"
-  # offset_y: "10px"
+  offset_x: "4px"
+  offset_y: "4px"
   border_radius: "0"
   component_separator:
-    label: " | "
+    label: ""
 
   components_left:
     - type: "tiling direction"
+      foreground: "#1F1F28"
+      border_width: "1px 0px 1px 1px"
+      border_color: "#DCD7BA"
       label_horizontal: "⮂"
       label_vertical: "⮁"
-      background: "#1d2021"
+      background: "#98BB6C"
       margin: "0 4px"
       padding: "0 8px"
     - type: "workspaces"
-      focused_workspace_background: "#54546d"
-      displayed_workspace_background: "#1d2021"
+      foreground: "#1F1F28"
+      background: "#76946A"
+      border_width: "1px 0px 1px 1px"
+      border_color: "#DCD7BA"
+      focused_workspace_background: "#98BB6C"
+      displayed_workspace_background: "#76946A"
       default_workspace_background: "transparent"
 
   components_center:
-   # - type: "window title"
     - type: "clock"
-      # Documentation on formatting date/time string:
-      # https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
-      time_formatting: "  hh:mm tt |   ddd MMM d"
+      background: "#D27E99"
+      foreground: "#1F1F28"
+      border_width: "1px 0px 1px 1px"
+      border_color: "#DCD7BA"
+      time_formatting: "   hh:mm tt    ddd MMM d "
       margin: "0 0 0 10px"
     - type: "weather"
+      background: "#D27E99"
+      foreground: "#1F1F28"
+      border_width: "1px 1px 1px 0px"
+      border_color: "#DCD7BA"
       latitude: -25.4542
       longitude: -49.2141
-      label: "{temperature_celsius}°C"
-      label_sun: "☀️ {temperature_celsius}°C"
-      label_moon: "🌙 {temperature_celsius}°C"
-      label_cloud_moon: "🌙☁️ {temperature_celsius}°C"
-      label_cloud_sun: "⛅ {temperature_celsius}°C"
-      label_cloud_moon_rain: "🌙🌧️ {temperature_celsius}°C"
-      label_cloud_sun_rain: "🌦️ {temperature_celsius}°C"
-      label_cloud_rain: "🌧️ {temperature_celsius}°C"
-      label_snow_flake: "❄️ {temperature_celsius}°C"
-      label_thunderstorm: "⚡ {temperature_celsius}°C"
-      label_cloud: "☁️ {temperature_celsius}°C"
+      label: "{temperature_celsius}°C "
+      label_sun: "☀️ {temperature_celsius}°C "
+      label_moon: "🌙 {temperature_celsius}°C "
+      label_cloud_moon: "🌙☁️ {temperature_celsius}°C "
+      label_cloud_sun: "⛅ {temperature_celsius}°C "
+      label_cloud_moon_rain: "🌙🌧️ {temperature_celsius}°C "
+      label_cloud_sun_rain: "🌦️ {temperature_celsius}°C "
+      label_cloud_rain: "🌧️ {temperature_celsius}°C "
+      label_snow_flake: "❄️ {temperature_celsius}°C "
+      label_thunderstorm: "⚡ {temperature_celsius}° C "
+      label_cloud: "☁️ {temperature_celsius}°C "
+
+  components_right:
     - type: "system tray"
       label_expand_text: "<"
       label_collapse_text: ">"
-  
-  components_right:
-    - type: "music"
-      label_not_playing: ""
-      label_paused: "{song_title} - {artist_name}"
-      label_playing: "{song_title} - {artist_name} ▶"
-      max_title_length: 20
-      max_artist_length: 20
     - type: "cpu"
-      label: "CPU: {percent_usage}%"
+      background: "#FF5D62"
+      foreground: "#1F1F28"
+      border_width: "1px"
+      border_color: "#DCD7BA"
+      margin: "1px 4px 1px 4px"
+      label: " CPU: {percent_usage}% "
       # How often this counter is refreshed.
       refresh_interval_ms: 1000
     - type: "gpu"
-      label: "GPU: {percent_usage}%"
+      background: "#FF5D62"
+      foreground: "#1F1F28"
+      border_width: "1px"
+      border_color: "#DCD7BA"
+      margin: "1px 4px 1px 4px"
+      label: " GPU: {percent_usage}% "
       # How often this counter is refreshed.
       refresh_interval_ms: 1000
     - type: "memory"
-      label: "RAM: {percent_usage}%"
+      background: "#FF5D62"
+      foreground: "#1F1F28"
+      border_width: "1px"
+      border_color: "#DCD7BA"
+      margin: "1px 4px 1px 4px"
       # How often this counter is refreshed.
+      label: " RAM: {percent_usage}% "
       refresh_interval_ms: 1000
+    - type: "music"
+      background: "#7FB4CA"
+      foreground: "#1F1F28"
+      border_width: "1px"
+      border_color: "#DCD7BA"
+      margin: "1px 4px 1px 4px"
+      label_not_playing: " "
+      label_paused: " {song_title} - {artist_name} "
+      label_playing: " {song_title} - {artist_name} ▶ "
+      max_title_length: 20
+      max_artist_length: 20
     - type: "volume"
-      label_low: "󰕿 {volume_level}%"
-      label_medium: "󰖀 {volume_level}%"
-      label_high: "󰕾 {volume_level}%"
-      label_mute: "󰝟 {volume_level}%"
+      background: "#7FB4CA"
+      foreground: "#1F1F28"
+      border_width: "1px"
+      border_color: "#DCD7BA"
+      margin: "1px 4px 1px 4px"
+      label_low: " 󰕿 {volume_level}% "
+      label_medium: " 󰖀 {volume_level}% "
+      label_high: " 󰕾 {volume_level}% "
+      label_mute: " 󰝟 {volume_level}% "
     #- type: "binding mode"
-      #background: "#ffffff33"
-      #margin: "0 4px 0 0"
-      #padding: "0 8px"
+    #background: "#ffffff33"
+    #margin: "0 4px 0 0"
+    #padding: "0 8px"
 
 workspaces:
   - name: "1"
@@ -261,3 +298,4 @@ keybindings:
     binding: "Alt+Shift+8"
   - commands: ["move to workspace 9", "focus workspace 9"]
     bindings: ["Alt+Shift+9"]
+
