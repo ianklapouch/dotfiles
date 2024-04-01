@@ -1,0 +1,37 @@
+" Vim settings
+
+set showmode
+set incsearch
+set ignorecase
+set smartcase
+set clipboard+=unnamed
+set relativenumber
+set scrolloff=5
+
+" Leader
+let mapleader = "\<Space>"
+
+
+map \r <Action>(ReformatCode)
+
+map <leader>pf :action SearchEverywhere<CR>
+
+nmap H <Action>(PreviousTab)
+nmap J <Action>(NextTab)
+
+" Splits
+map ss <Action>(SplitHorizontally)
+map sv <Action>(SplitVertically)
+
+
+
+
+:nnoremap <C-d> <C-d>zz
+:nnoremap <C-u> <C-u>zz
+
+:nnoremap n nzz
+:nnoremap N Nzz
+
+:nnoremap <leader>e <Action>(ActivateProjectToolWindow)
+
+
