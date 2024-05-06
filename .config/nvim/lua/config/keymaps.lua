@@ -5,8 +5,8 @@ local opts = { noremap = true, silent = true }
 keymap.set("n", "<C-u>", "<C-u>zz")
 keymap.set("n", "<C-d>", "<C-d>zz")
 
-keymap.set("n", "n", "nzz")
-keymap.set("n", "N", "Nzz")
+keymap.set("n", "n", "nzzzv")
+keymap.set("n", "N", "Nzzzv")
 
 -- Delete text without affecting default register
 keymap.set("n", "x", '"_x')
@@ -54,3 +54,6 @@ keymap.set("n", "<F12>", require("dap").step_out)
 
 --Undo Tree
 vim.keymap.set("n", "<leader>U", vim.cmd.UndotreeToggle, { desc = "Undotree" })
+
+--
+keymap.set("i", "<tab>", "<nop>", {})
