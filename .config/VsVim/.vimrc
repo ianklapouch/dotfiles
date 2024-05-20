@@ -3,6 +3,7 @@ set relativenumber
 
 " ignore case when searching
 set ignorecase
+
 " case insensitive unles uppercase is entered
 set smartcase
 set showmatch
@@ -23,7 +24,6 @@ nnoremap H gT
 "Split Window
 nnoremap ss :split<Return>
 nnoremap sv :vsplit<Return>
-nnoremap sl <C-W>l
 
 "Move between splits
 nnoremap sh <C-W>h
@@ -38,5 +38,8 @@ nnoremap n nzz
 kjoremap N Nzz
 
 "Delete text without affecting default register
-nnoremap x _x
+nnoremap x "_x
 
+"Toggle comment command
+:nmap gc :vsc Edit.ToggleLineComment<CR>
+:vmap gc :vsc Edit.ToggleLineComment<CR>
