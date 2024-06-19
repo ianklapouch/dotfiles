@@ -44,6 +44,9 @@ return {
   },
   { "Shatur/neovim-ayu" },
   { "rebelot/kanagawa.nvim" },
+  { "sainnhe/gruvbox-material" },
+  { "diegoulloao/neofusion.nvim" },
+  { "datsfilipe/min-theme.nvim" },
   {
     "LazyVim/LazyVim",
     opts = {
