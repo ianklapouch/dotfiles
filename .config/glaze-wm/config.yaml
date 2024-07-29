@@ -1,10 +1,10 @@
 colors:
-background_color: &background_color "#282828"
+background_color: &background_color "#1e1e2e"
 background_color1: &background_color1 "#1b1b1b"
 foreground: &foreground "#ddc7a1"
-green: &green "#a9b665"
-blue: &blue "#7daea3"
-red: &red "#ea6962"
+green: &green "#a6e3a1"
+blue: &blue "#89b4fa"
+red: &red "#f38ba8	"
 dark_red: &dark_red "#402120"
 
 gaps:
@@ -19,7 +19,7 @@ bar:
   height: "35px"
   position: "top"
   background: *background_color
-  foreground: "#C5C8C6"
+  foreground: "#cdd6f4"
   font_family: "JetBrainsMono Nerd Font"
   font_size: "14px"
   font_weight: "bold"
@@ -43,7 +43,7 @@ bar:
       foreground: *background_color1
       focused_workspace_background: *dark_red
       focused_workspace_foreground: *foreground
-      displayed_workspace_background: "#76946A"
+      displayed_workspace_background: *dark_red
       default_workspace_background: "transparent"
 
   components_center:

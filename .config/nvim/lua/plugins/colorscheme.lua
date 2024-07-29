@@ -1,9 +1,9 @@
 return {
-  { "sainnhe/gruvbox-material" },
+  { "catppuccin/nvim" },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox-material",
+      colorscheme = "catppuccin-mocha",
     },
   },
 }

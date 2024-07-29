@@ -1,6 +1,12 @@
 return {
   { "mbbill/undotree" },
   {
+    "neovim/nvim-lspconfig",
+    opts = {
+      inlay_hints = { enabled = false },
+    },
+  },
+  {
     "telescope.nvim",
     keys = {
       {
@@ -30,17 +36,17 @@ return {
   {
     "stevearc/conform.nvim",
     opts = {
-      formatters_by_ft = {
-        ["javascript"] = { "biome" },
-        ["javascriptreact"] = { "biome" },
-        ["typescript"] = { "biome" },
-        ["typescriptreact"] = { "biome" },
-        ["json"] = { "biome" },
-        ["jsonc"] = { "biome" },
-        ["vue"] = { "biome" },
-        ["css"] = { "biome" },
-        ["html"] = { "biome" },
-      },
+      -- formatters_by_ft = {
+      --   ["javascript"] = { "biome" },
+      --   ["javascriptreact"] = { "biome" },
+      --   ["typescript"] = { "biome" },
+      --   ["typescriptreact"] = { "biome" },
+      --   ["json"] = { "biome" },
+      --   ["jsonc"] = { "biome" },
+      --   ["vue"] = { "biome" },
+      --   ["css"] = { "biome" },
+      --   ["html"] = { "biome" },
+      -- },
     },
   },
   {
