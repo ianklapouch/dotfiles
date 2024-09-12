@@ -11,4 +11,7 @@ vim.opt.smartindent = true
 vim.opt.ignorecase = true -- Case insensitive searching UNLESS /C or capital in search
 
 vim.opt.foldmethod = "manual"
-vim.opt.mouse = ""
+-- vim.opt.mouse = ""
+vim.opt.spell = false
+
+vim.opt.guifont = "JetBrainsMono Nerd Font:h14"
