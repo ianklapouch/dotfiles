@@ -52,12 +52,12 @@ vim.keymap.set({ "n", "v", "i" }, "<C-->", function()
 end)
 
 -- Terminal
-local Terminal = require("toggleterm.terminal").Terminal
--- local lazygit = Terminal:new({ cmd = "lazygit", hidden = true })
---
--- local lazygit_toggle = function()
---   lazygit:toggle()
--- end
-
-keymap.set("n", "<leader>tt", "<cmd>ToggleTerm direction=float<cr>", { desc = "Toggle Terminal" })
-keymap.set("t", "<leader>tt", "<C-\\><C-n><C-w>l", { desc = "Hide Terminal" })
+-- keymap.set("n", "<leader>tt", "<cmd>ToggleTerm<cr>pwsh<cr>", { desc = "Toggle Terminal" })
+-- Keymaps inside Terminal
+-- vim.keymap.set("t", "<esc>", [[<C-\><C-n>]], { buffer = 0 })
+-- vim.keymap.set("t", "jk", [[<C-\><C-n>]], { buffer = 0 })
+-- vim.keymap.set("t", "<C-h>", [[<Cmd>wincmd h<CR>]], { buffer = 0 })
+-- vim.keymap.set("t", "<C-j>", [[<Cmd>wincmd j<CR>]], { buffer = 0 })
+-- vim.keymap.set("t", "<C-k>", [[<Cmd>wincmd k<CR>]], { buffer = 0 })
+-- vim.keymap.set("t", "<C-l>", [[<Cmd>wincmd l<CR>]], { buffer = 0 })
+-- vim.keymap.set("t", "<C-w>", [[<C-\><C-n><C-w>]], { buffer = 0 })
