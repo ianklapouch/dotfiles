@@ -1,37 +1,67 @@
-" Vim settings
-
+" Options
 set showmode
 set incsearch
 set ignorecase
 set smartcase
 set clipboard+=unnamed
-set relativenumber
+set number relativenumber
 set scrolloff=5
 
-" Leader
+" Leader key
 let mapleader = "\<Space>"
 
+" Plugins
+set surround
+set highlightedyank
+set nerdtree
 
-map \r <Action>(ReformatCode)
+map \r <action>(ReformatCode)
 
-map <leader>pf :action SearchEverywhere<CR>
+map <Leader><Leader> <Action>(GotoFile)
+nmap gc <action>(CommentByLineComment)
 
-nmap H <Action>(PreviousTab)
-nmap J <Action>(NextTab)
+" Split windows
+nmap <leader><Bar> <action>(SplitVertically)
+nmap <leader>- <action>(SplitHorizontally)
 
-" Splits
-map ss <Action>(SplitHorizontally)
-map sv <Action>(SplitVertically)
+nmap <C-Down> <action>(StretchSplitToBottom)
+nmap <C-Left> <action>(StretchSplitToLeft)
+nmap <C-Right> <action>(StretchSplitToRight)
+nmap <C-Up> <action>(StretchSplitToTop)
 
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
 
+" Scroll
+nmap <C-d> <C-d>zz
+nmap <C-u> <C-u>zz
+vmap <C-d> <C-d>zz
+vmap <C-u> <C-u>zz
 
+" Center cursor after go to search pattern
+nmap n nzz
+nmap N Nzz
 
-:nnoremap <C-d> <C-d>zz
-:nnoremap <C-u> <C-u>zz
+" Alias 
+imap <C-c> <Esc>
 
-:nnoremap n nzz
-:nnoremap N Nzz
+" Paste without affecting register
+vmap P "_dP 
 
-:nnoremap <leader>e <Action>(ActivateProjectToolWindow)
+" Move lines
+nmap <A-k> <action>(MoveLineUp)
+nmap <A-j> <action>(MoveLineDown)
 
+" "Buffers"
+nmap H <action>(PreviousTab)
+nmap L <action>(NextTab)
 
+nmap <leader>bo  <action>(CloseAllEditorsButActive)
+nmap <leader>bd  <action>(CloseContent)
+
+nmap <leader>e :NERDTreeToggle<CR>
+"nmap <leader>e <action>(HideActiveWindow)
+
+"map j <action>(Tree-selectNext)
