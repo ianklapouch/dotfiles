@@ -1,11 +1,21 @@
 return {
   { "catppuccin/nvim" },
-  { "rose-pine/neovim" },
+  {
+    "rose-pine/neovim",
+    name = "rose-pine",
+    opts = function()
+      return {
+        variant = "moon",
+        styles = {
+          italic = false,
+        },
+      }
+    end,
+  },
   {
     "LazyVim/LazyVim",
     opts = {
-      -- colorscheme = "catppuccin-mocha",
-      colorscheme = "rose-pine-moon",
+      colorscheme = "rose-pine",
     },
   },
 }
